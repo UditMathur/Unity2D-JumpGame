@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -48,13 +49,14 @@ public class Player : MonoBehaviour {
             _uiManager.ShowGameOver();
             _gameManager.gameOver = true;
 
-            //if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 //_uiManager.HideGameOver();
                 //_gameManager.gameOver = false;
                 //_uiManager.ShowTitleScreen();
                 //_gameManager.showTitleScreen = true;
                 //_gameManager.StartScreen();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
 
         }
